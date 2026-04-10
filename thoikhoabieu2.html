@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời Khóa Biểu</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: blue;
+            font-size: 50px;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            color: blue;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .info-left,
+        .info-right {
+            line-height: 1.6;
+        }
+
+        .info-left {
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        thead th {
+            font-size: 0.9em;
+        }
+
+        th[rowspan="2"] {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><strong>Thời Khóa Biểu</strong></h1>
+    <div class="info-container">
+        <div class="info-left">
+            <p>Lớp: T0908I</p>
+            <p>Giáo viên: KhoaNV</p>
+            <p>Phòng học: Class3/Lab3</p>
+        </div>
+        <div class="info-right">
+            <p>Thời gian học: 13h30 - 17h30</p>
+            <p>Ngày học: Thứ 3, 5, 7</p>
+        </div>
+    </div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2" colspan="3"></th>
+                <th class="yellow">Thứ 3</th>
+                <th class="yellow">Thứ 5</th>
+                <th class="yellow">Thứ 7</th>
+            </tr>
+            <tr>
+                <th colspan="3" class="orange">Môn học</th>
+            </tr>
+            <tr class="orange">
+                <th>Tuần</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <td colspan="3"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>01/09/2009</td>
+                <td>05/09/2009</td>
+                <td>CF - T1, L1</td>
+                <td>CF - T2, L2</td>
+                <td>CF - T3, L3</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>06/09/2009</td>
+                <td>10/09/2009</td>
+                <td>CF - T4, L4</td>
+                <td>CF - Written Test</td>
+                <td>C - T1, L1</td>
+            </tr>
+
+            <tr>
+                <td>03</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
