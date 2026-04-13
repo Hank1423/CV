@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.calendar {
+    width: 600px;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family:  "Times New Roman", Times, serif;
+}
+
+th {
+    border: none !important;
+}
+
+th, td {
+    border: 1px solid #999;
+    width: 14.28%;
+    height: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.vn-days th {
+    background-color: orange;
+    color: white;
+    border-right: 2px solid white !important;
+    padding: 10px 0;
+}
+
+.vn-days th.sun {
+    background-color: red;
+}
+
+.vn-days th.sat {
+    background-color: blue;
+    border-right: none !important;
+}
+
+.en-days th {
+    font-weight: normal;
+    padding: 10px 0;
+    border: none !important;
+    border-bottom: 2px solid #999 !important;
+    background-color: white;
+}
+
+.sun-text {
+    color: red;
+}
+
+.sat-text {
+    color: blue;
+}
+
+td {
+    border: 3px solid #999;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+sub {
+    font-size: 11px;
+    font-weight: normal;
+    color: #444;
+    vertical-align: sub;
+    margin-left: 2px;
+}
+
+.sun-col {
+    color: red;
+}
+
+.sat-col {
+    color: blue;
+}
