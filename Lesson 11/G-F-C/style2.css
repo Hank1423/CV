@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    width: 280px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.switch-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.label-name {
+    font-weight: 700;
+    color: #666;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    background: #e0e0e0;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"] {
+    background: #4CAF50;
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input[type="checkbox"]:checked:before {
+    left: 33px;
+}
+
+#good:checked { background: #2196F3; }
+#fast:checked { background: #FF9800; }
+#cheap:checked { background: #F44336; }
