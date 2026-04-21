@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Hàm kiểm tra số nguyên tố</h2>
+        <div class="section">
+            <input type="number" id="inputNum" placeholder="Nhập một số...">
+            <button onclick="check()">Kiểm tra</button>
+            <p id="result"></p>
+        </div>
+        <hr>
+        <div class="section">
+            <button onclick="listPrimes()">Liệt kê các số nguyên tố nhỏ hơn 10000</button>
+            <div id="listResult" class="scroll-box"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>    
+</body>
+</html>

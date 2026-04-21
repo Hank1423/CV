@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hiển Thị kết quả</h3>
+    <input type="number" id="Input" placeholder="Nhập số ở đây: ">
+    <button onclick="TangSo()">Tăng thêm 1 số</button>
+    <p id="result"></p>
+    <script>
+        function tangMotDonVi(SoBanDau){
+            function tinhtoan(){
+                return SoBanDau + 1;
+            }
+        return tinhtoan();
+        }
+
+        function TangSo(){
+            let x = +document.getElementById("Input").value;
+            document.getElementById("result").innerHTML = "Kết quả " + tangMotDonVi(x);
+        }
+        
+    </script>
+</body>
+</html>
