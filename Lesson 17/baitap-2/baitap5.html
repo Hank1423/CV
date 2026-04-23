@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h3>Nhập 3 số để tìm số nhỏ nhất</h3>
+        <input type="number" id="numA" placeholder="Nhập số a">
+        <input type="number" id="numB" placeholder="Nhập số b">
+        <input type="number" id="numC" placeholder="Nhập số c">
+        <br><br>
+        <button onclick="checkMin()">Tìm số nhỏ nhất ngay!</button>
+        <p id="hienThiKetQua" style="font-weight: bold; color: blue;"></p>
+    </div>
+    <script>
+        function checkMin() {
+            let x = +document.getElementById("numA").value;
+            let y = +document.getElementById("numB").value;
+            let z = +document.getElementById("numC").value;
+
+            console.log("Dữ liệu nhận vào:", x, y, z); // Kiểm tra đầu vào
+
+            let ketQua;
+
+            if (x <= y && x <= z) {
+                console.log("X là số nhỏ nhất");
+                ketQua = x;
+            } else if (y <= x && y <= z) {
+                console.log("Y là số nhỏ nhất");
+                ketQua = y;
+            } else {
+                console.log("Z là số nhỏ nhất");
+                ketQua = z;
+            }
+
+            document.getElementById("hienThiKetQua").innerHTML = "Số bé nhất là: " + ketQua;
+        }
+    </script>
+</body>
+
+</html>

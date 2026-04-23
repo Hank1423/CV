@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Kiểm tra số nguyên lớn hơn 0</h3>
+    <input type="number" id="check" placeholder="Điền số bất kì: ">
+    <button onclick="CheckNum()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function CheckNum(){
+            let num = document.getElementById("check").value;
+            if (num === ""){
+                document.getElementById("result").innerHTML = "Vui lòng nhập số: ";
+                return;
+            }
+            let n = Number(num);
+            let result = Number.isInteger(n) && n > 0;
+            if (result) {
+                document.getElementById("result").innerHTML = "Đây là số nguyên dương"
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").innerHTML = "Đây không phải là số nguyên dương"
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

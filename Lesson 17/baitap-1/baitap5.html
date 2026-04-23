@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tra cứu</h3>
+    <p id="result"></p>
+    <script>
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function TimChomSao(starName){
+            for(let i = 0; i < stars.length; i++){
+                if (stars[i].toLowerCase() === starName.toLowerCase()){
+                    return constellations[i];
+                }
+            }
+            return null;
+        }
+
+        let inputStar = prompt("Nhập tên ngôi sao: ");
+        if (inputStar){
+            let result = TimChomSao(inputStar);
+            if (result){
+                document.getElementById("result").innerHTML = "Ngôi sao " + inputStar + " thuộc chòm sao: " + result;
+                console.log("result".innerHTML = "Ngôi sao " + inputStar + " thuộc chòm sao: " + result);
+            } else {
+                document.getElementById("result").innerHTML = "Không tìm thấy thông tin về ngôi sao" + inputStar;
+                console.log("result".innerHTML = "Không tìm thấy thông tin về ngôi sao" + inputStar);
+            }
+        }
+    </script>
+</body>
+
+</html>

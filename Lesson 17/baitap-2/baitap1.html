@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tính bình phương</h3>
+    <input type="number" id="inputNum" placeholder="Nhập số vào đây: " oninput="Square()">
+    <p id="result"></p>
+    <script>
+        function tinhbinhphuong(x){
+            return x*x;
+        }
+
+        function Square(){
+            let num = +document.getElementById("inputNum").value;
+            let result = tinhbinhphuong(num);
+            document.getElementById("result").innerHTML = "Bình phương của " + num + " là: " + result;
+        }
+    </script>
+</body>
+</html>

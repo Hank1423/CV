@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hiển thị kết quả</h3>
+    <input type="number" id="Input1" placeholder="Nhập số thứ nhất ở đây: ">
+    <input type="number" id="Input2" placeholder="Nhập số thứ hai ở đây: ">
+    <button onclick="SoSanh()">So Sánh</button>
+    <p id="result"></p>
+    <script>
+        function CheckAndSum(a,b){
+            if (a > b) {
+                alert("Số thứ nhất (" + a + ") lớn hơn số thứ hai (" + b + ")");
+                return "";
+            } else {
+                return a + b;
+            }
+        }
+
+        function SoSanh() {
+            let n1 = +document.getElementById("Input1").value;
+            let n2 = +document.getElementById("Input2").value;
+            let result = CheckAndSum(n1,n2);
+            if (result !== ""){
+                document.getElementById("result").innerHTML = "Tổng là: " + result;
+            } else {
+                document.getElementById("result").innerHTML = ""
+            }
+        }
+    </script>
+</body>
+</html>

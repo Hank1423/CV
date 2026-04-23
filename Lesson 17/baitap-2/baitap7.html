@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Đổi chỗ a và b</h3>
+    <input type="number" id="numA" placeholder="Nhập số A: ">
+    <input type="number" id="numB" placeholder="Nhập số B">
+    <button onclick="Swap()">Kết quả</button>
+    <script>
+        function Swap(){
+            let A = document.getElementById("numA").value;
+            let B = document.getElementById("numB").value;
+
+            let a = Number(A);
+            let b = Number(B);
+
+            if (A !== "" && B !== "" && Number.isInteger(a) && Number.isInteger(b)) {
+                let temp = a;
+                a = b;
+                b = temp;
+                
+                document.getElementById("numA").value = a;
+                document.getElementById("numB").value = b;
+
+                alert("Đã đổi chỗ hai số")
+            } else {
+                alert("Vui lòng nhập lại số")
+            }
+        }
+    </script>
+</body>
+</html>

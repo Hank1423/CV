@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check tuổi vào lớp 10</h3>
+    <input type="number" id="age" placeholder="Nhập tuổi: ">
+    <button onclick="check()">Kiểm tra</button>
+    <script>
+        function check(){
+            let ageinput = document.getElementById("age").value;
+            let age = Number(ageinput);
+
+            if (ageinput === ""){
+                alert("Nhập số tuổi");
+            }
+            else if (age < 0){
+                alert("Tuổi không thể âm. Vui lòng nhập lại");
+            } else {
+                if (age >= 15) {
+                    alert("Học sinh này " + age + " đủ tuổi vào lớp 10");
+                } else {
+                    alert("Học sinh này " + age + " không đủ tuổi vào lớp 10");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

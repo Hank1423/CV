@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tính Chu vi & Diện tích Hình tròn</h3>
+    <input type="number" id="radiusInput" placeholder="Nhập bán kính (r): " oninput="tinhtoan()">
+    <p id="resChuVi"></p>
+    <p id="resDienTich"></p>
+    <script>
+        function ChuVi(r){
+            return 2*Math.PI*r;
+        }
+
+        function DienTich(r){
+            return Math.PI*r*r;
+        }
+
+        function tinhtoan() {
+            let r = +document.getElementById("radiusInput").value;
+            if (r > 0) {
+                let cv = ChuVi(r);
+                let dt = DienTich(r);
+
+                document.getElementById("resChuVi").innerHTML = "Chu vi: " + cv.toFixed(2);
+                document.getElementById("resDienTich").innerHTML = "Diện tích: " + dt.toFixed(2);
+            } else {
+                document.getElementById("resChuVi").innerHTML = "";
+                document.getElementById("resDienTich").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

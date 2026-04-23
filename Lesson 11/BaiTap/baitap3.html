@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check số</h3>
+    <input type="number" id="num" placeholder="Nhập số: ">
+    <button onclick="check()">Kiểm tra</button>
+    <script>
+        function check(){
+            let input = document.getElementById("num").value;
+            if (input === ""){
+                alert("Hãy nhập số");
+                return;
+            }
+
+            let n = parseFloat(input);
+
+            if (n > 0) {
+                alert(n + " là số lớn hơn 0");
+            } else if (n < 0) {
+                alert(n + " là số nhỏ hơn 0");
+            } else {
+                alert(n + " là số bằng 0");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Phần mềm Xếp loại Học lực</h3>
+    <p>Điểm kiểm tra: <input type="number" id="kiemTra" step="0.1"></p>
+    <p>Điểm giữa kỳ: <input type="number" id="giuaKy" step="0.1"></p>
+    <p>Điểm cuối kỳ: <input type="number" id="cuoiKy" step="0.1"></p>
+    <button onclick="xepLoai()">Tính kết quả</button>
+
+    <p id="result"></p>
+
+    <script>
+        function xepLoai() {
+            let diemKT = parseFloat(document.getElementById("kiemTra").value);
+            let diemGK = parseFloat(document.getElementById("giuaKy").value);
+            let diemCK = parseFloat(document.getElementById("cuoiKy").value);
+
+            if (isNaN(diemKT) || isNaN(diemGK) || isNaN(diemCK)) {
+                alert("Nhập điểm");
+                return;
+            }
+
+            let dtb = (diemKT + diemGK * 2 + diemCK * 3) / 6;
+
+            dtb = dtb.toFixed(1);
+
+            let ketQua = "";
+            if (dtb >= 8.0) {
+                ketQua = "Học lực GIỎI";
+            } else if (dtb >= 6.5) {
+                ketQua = "Học lực KHÁ";
+            } else if (dtb >= 5.0) {
+                ketQua = "Học lực TRUNG BÌNH";
+            } else {
+                ketQua = "Học lực YẾU";
+            }
+
+            let hienThi = document.getElementById("result");
+            hienThi.innerHTML = "Điểm trung bình: " + dtb + " - " + ketQua;
+        }
+    </script>
+</body>
+
+</html>

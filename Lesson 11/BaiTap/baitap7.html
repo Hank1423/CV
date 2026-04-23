@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính Cước Điện Thoại Gia Đình</h3>
+    <p>Nhập tổng số phút đã gọi:
+        <input type="number" id="soPhut" placeholder="Ví dụ: 250">
+    </p>
+    <button onclick="tinhCuoc()">Tính cước</button>
+
+    <p id="result" style="background: #f4f4f4; padding: 10px; border-radius: 5px;"></p>
+
+    <script>
+        function tinhCuoc() {
+            let phicodinh = 25000;
+            let phut = Number(document.getElementById("soPhut").value);
+            let tongTien = 0;
+            if (isNaN(phut) || phut < 0) {
+                alert("Vui lòng nhập số hợp lễ");
+                return;
+            }
+            if (phut > 200) {
+                tongTien = (phut - 200) * 200 + (150 * 400) + (50 + 600);
+            }
+            else if (phut > 50) {
+                tongTien = (phut - 50) * 400(50 * 600);
+            } else {
+                tongTien = phut * 600;
+            }
+            let ketqua = tongTien + phicodinh;
+
+            document.getElementById("result").innerHTML =
+                `Phí thuê bao: 25.000đ <br>` +
+                `Cước cuộc gọi: ${tongTien.toLocaleString()}đ <br>` +
+                `<b>Tổng hóa đơn: ${ketqua.toLocaleString()}đ</b>`;
+        }
+    </script>
+</body>
+
+</html>

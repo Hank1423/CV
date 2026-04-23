@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính toán hoa hồng bán hàng</h3>
+    <p>Nhập doanh số:
+        <input type="number" id="sales" placeholder="Nhập số">
+    </p>
+    <button onclick="TinhToan()">Tính</button>
+    <p id="result"></p>
+    <script>
+        function TinhToan() {
+            let doanhSo = parseFloat(document.getElementById("sales").value);
+
+            if (isNaN(doanhSo) || doanhSo < 0) {
+                alert("Nhập doanh số hợp lệ nhé!");
+                return;
+            }
+
+            let hoaHong;
+            let phanTram;
+
+            if (doanhSo > 300) {
+                phanTram = 20;
+                hoaHong = doanhSo * 0.2; 
+            }
+            else if (doanhSo > 100) {
+                phanTram = 10;
+                hoaHong = doanhSo * 0.1; 
+            }
+            else {
+                phanTram = 5;
+                hoaHong = doanhSo * 0.05; 
+            }
+
+            document.getElementById("result").innerHTML =
+                `Với doanh số ${doanhSo} triệu, bạn nhận ${phanTram}% hoa hồng. <br>` +
+                `<b>Tiền thưởng: ${hoaHong.toFixed(2)} triệu</b>`;
+        }
+    </script>
+</body>
+
+</html>

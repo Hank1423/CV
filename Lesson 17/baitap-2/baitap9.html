@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Kiểm tra sự xuất hiện của ký tự</h3>
+    
+    <p>Nhập mảng (ví dụ: a, b, a, c):</p>
+    <input type="text" id="inputArray" placeholder="a, b, a, c">
+    
+    <p>Nhập ký tự cần tìm:</p>
+    <input type="text" id="inputChar" maxlength="1" style="width: 50px;">
+    
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result" style="font-weight: bold; color: green;"></p>
+
+    <script>
+        function check(){
+            let str = document.getElementById("inputArray").value;
+            let char = document.getElementById("inputChar").value;
+            
+            let arr = str.split(",");
+            
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = arr[i].trim();
+            }
+
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === char) {
+                    count++;
+                }
+            }
+
+            let message;
+            if (count > 0) {
+                message = "Ký tự '" + char + "' xuất hiện " + count + " lần.";
+            } else {
+                message = "-1 (Không tìm thấy)";
+            }
+
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

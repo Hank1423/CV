@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Ứng dụng Đảo Ngược Mảng</h3>
+
+    <p>Nhập dãy số (cách nhau bởi dấu phẩy):</p>
+    <input type="text" id="input" placeholder="Ví dụ: 1, 2, 3, 4">
+
+    <button onclick="swab()">Đảo ngược ngay</button>
+
+    <p id="Before"></p>
+    <p id="After" style="color: blue; font-weight: bold;"></p>
+
+    <script>
+        function swab() {
+            let str = document.getElementById("input").value;
+            let arr = str.split(",");
+
+            document.getElementById("Before").innerHTML = "Mảng ban đầu: " + str;
+
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = Number(arr[i].trim());
+            }
+
+            let n = arr.length;
+            for (let i = 0; i < n / 2; i++) {
+                let temp = arr[i];
+                arr[i] = arr[n - 1 - i];
+                arr[n - 1 - i] = temp;
+            }
+            document.getElementById("After").innerHTML = "Mảng sau khi đảo: " + arr;
+        }
+    </script>
+</body>
+
+</html>
