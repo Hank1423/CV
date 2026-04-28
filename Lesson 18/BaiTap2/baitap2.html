@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(celsius) {
+                if (celsius < -273) {
+                    alert("Nhiệt độ ko thể thấp hơn -273");
+                    this.celsius = -273;
+                } else {
+                    this.celsius = celsius;
+                }
+            }
+
+            toFahrenheit() {
+                return (this.celsius * 9 / 5) + 32;
+            }
+
+
+            toKelvin() {
+                return this.celsius + 273.15;
+            }
+
+
+        }
+        let myTemp = new Temperature(25)
+        let fahrenheit = myTemp.toFahrenheit();
+        let kelvin = myTemp.toKelvin();
+        alert("Nhiệt độ Celsius: " + myTemp.celsius + "°C");
+        alert("Chuyển sang Fahrenheit: " + fahrenheit + "°F");
+        alert("Chuyển sang Kelvin: " + kelvin + "K");
+
+    </script>
+</body>
+
+</html>

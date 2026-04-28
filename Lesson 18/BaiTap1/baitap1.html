@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+    <div id="info"></div>
+    <script>
+        function Rectangle(length, width) {
+            this.length = length;
+            this.width = width;
+
+            this.getArea = function () {
+                return (this.length * this.width).toFixed(2);
+            };
+
+            this.getPerimeter = function () {
+                return ((this.length + this.width) * 2).toFixed(2);
+            };
+        }
+
+        function getRandomColor() {
+            var red = Math.floor(Math.random() * 50);
+            var blue = Math.floor(Math.random() * 56) + 200;
+            var green = Math.floor(Math.random() * (blue - 50));
+            return "rgb(" + red + "," + green + "," + blue + ")";
+        }
+
+        function createRectangle() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            var color = getRandomColor();
+            var length = Math.random() * window.innerWidth;
+            var width = Math.random() * window.innerHeight;
+            var rectangle = new Rectangle(length, width);
+            ctx.beginPath();
+            ctx.rect(50, 50, rectangle.length, rectangle.width);
+            ctx.fillStyle = color;
+            ctx.fill()
+
+            var infoDiv = document.getElementById("info");
+            infoDiv.innerHTML = "Diện tích hình chữ nhật: **" + rectangle.getArea() + "** <br>" +
+                "Chu vi hình chữ nhật: **" + rectangle.getPerimeter() + "**";
+        }
+
+        createRectangle();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng Điện thoại OOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="phone" id="ui-nokia">
+        <div class="header">
+            <span>NOKIA</span>
+            <span id="pin-nokia">100%</span>
+        </div>
+        <div class="screen" id="screen-nokia">Máy đang tắt</div>
+        <textarea id="input-nokia" placeholder="Soạn tin nhắn..."></textarea>
+        <div class="controls">
+            <button class="btn-power" onclick="handlePower('nokia')">Bật/Tắt</button>
+            <button onclick="handleCharge('nokia')">Sạc Pin</button>
+            <button onclick="handleViewInbox('nokia')">Hộp thư đến</button>
+            <button class="btn-send" onclick="handleSend('nokia')">Gửi iPhone</button>
+        </div>
+    </div>
+
+    <div class="phone" id="ui-iphone">
+        <div class="header">
+            <span>iPHONE</span>
+            <span id="pin-iphone">100%</span>
+        </div>
+        <div class="screen" id="screen-iphone">Máy đang tắt</div>
+        <textarea id="input-iphone" placeholder="Soạn tin nhắn..."></textarea>
+        <div class="controls">
+            <button class="btn-power" onclick="handlePower('iphone')">Bật/Tắt</button>
+            <button onclick="handleCharge('iphone')">Sạc Pin</button>
+            <button onclick="handleViewInbox('iphone')">Hộp thư đến</button>
+            <button class="btn-send" onclick="handleSend('iphone')">Gửi Nokia</button>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
