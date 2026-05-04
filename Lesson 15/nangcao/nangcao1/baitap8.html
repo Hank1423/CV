@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1)));
+        }
+
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        alert("Mảng sau khi sắp xếp giảm dần: " + arr.join(", "));
+    </script>
+</body>
+
+</html>

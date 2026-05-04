@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p = +prompt("Nhập số tiền gốc ban đầu (VNĐ):");
+        let n = +prompt("Nhập số tháng cho vay:");
+        let r = +prompt("Nhập lãi suất hàng tháng (ví dụ 0.5% thì nhập 0.5):") / 100;
+        if (isNaN(p) || isNaN(n) || isNaN(r) || p <= 0 || n <= 0 || r <= 0) {
+            console.log("Vui lòng nhập các con số dương hợp lệ!");
+        } else {
+            let total = p * Math.pow((1 + r), n);
+            let interest = total - p;
+            console.log("--- KẾT QUẢ TÍNH LÃI KÉP ---");
+            console.log(`Số tiền gốc: ${p.toLocaleString()} VNĐ`);
+            console.log(`Sau ${n} tháng với lãi suất ${r * 100}%/tháng:`);
+            console.log(`Tiền lãi nhận được: ${interest.toLocaleString(undefined, { maximumFractionDigits: 0 })} VNĐ`);
+            console.log(`Tổng số tiền cuối cùng: ${total.toLocaleString(undefined, { maximumFractionDigits: 0 })} VNĐ`);
+        }
+    </script>
+</body>
+
+</html>

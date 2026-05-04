@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhập số bất kì");
+        if (n < 0){
+            alert("Error");
+        } else {
+            let giaiThua = 1;
+            for (let i = 1; i <= n; i++){
+                giaiThua *= i;
+            }
+            console.log(`${n}! = ${giaiThua}`)
+        }
+    </script>
+</body>
+</html>

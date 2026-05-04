@@ -1,0 +1,142 @@
+/* Import font chữ hiện đại từ Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f5; /* Màu nền trung tính hiện đại */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* Thùng chứa chính để mọi thứ gọn gàng */
+.app-container {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 24px; /* Bo góc lớn cực sang */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03); /* Đổ bóng cực mịn */
+}
+
+h2 {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Thanh nhập liệu kiểu hiện đại */
+.input-group {
+    display: flex;
+    gap: 10px; /* Tạo khoảng cách giữa input và nút */
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+#product-name {
+    flex: 1;
+    max-width: 400px;
+    padding: 14px 20px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+#product-name:focus {
+    outline: none;
+    border-color: #3b82f6; /* Xanh dương hiện đại */
+    background: white;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+#btn-product {
+    background: #1e293b;
+    color: white;
+    padding: 0 25px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn-product:hover {
+    background: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Bảng dữ liệu tối giản */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Tạo khoảng trống giữa các hàng */
+}
+
+thead th {
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+tbody tr {
+    background: white;
+    transition: all 0.2s ease;
+}
+
+tbody tr td {
+    padding: 20px;
+    border-top: 1.5px solid #f1f5f9;
+    border-bottom: 1.5px solid #f1f5f9;
+    color: #334155;
+}
+
+/* Bo góc cho hàng đầu và cuối */
+tbody tr td:first-child { border-left: 1.5px solid #f1f5f9; border-radius: 12px 0 0 12px; }
+tbody tr td:last-child { border-right: 1.5px solid #f1f5f9; border-radius: 0 12px 12px 0; }
+
+tbody tr:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+/* Nút Sửa và Xóa kiểu tối giản */
+button[onclick*="editProduct"], button[onclick*="deleteProduct"] {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+button[onclick*="editProduct"] {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+}
+
+button[onclick*="editProduct"]:hover {
+    background: #2563eb;
+    color: white;
+}
+
+button[onclick*="deleteProduct"] {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fee2e2;
+}
+
+button[onclick*="deleteProduct"]:hover {
+    background: #dc2626;
+    color: white;
+}

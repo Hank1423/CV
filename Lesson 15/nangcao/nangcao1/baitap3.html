@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Bạn muốn nhập bao nhiêu phần tử vào mảng?"));
+        let arr = [];
+        let sum = 0;
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1)));
+            sum += arr[i];
+        }
+
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        let average = sum / arr.length;
+
+        alert("Mảng bạn vừa nhập: " + arr.join(", "));
+        alert("Giá trị lớn nhất trong mảng là: " + max);
+        alert("Giá trị trung bình của các phần tử là: " + average);
+    </script>
+</body>
+
+</html>

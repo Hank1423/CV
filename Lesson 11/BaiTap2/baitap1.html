@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let c = parseFloat(prompt("Nhập độ C:"));
+
+        if (c < -273.15) {
+            console.log("Nhiệt độ không hợp lệ! (Phải lớn hơn -273.15°C)");
+        } else {
+            let f = c * 9 / 5 + 32;
+            console.log(`${c}°C bằng ${f}°F`);
+        }
+    </script>
+</body>
+
+</html>

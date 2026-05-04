@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="playGame()">Chơi</button>
+    <script>
+        function playGame() {
+            let range = +prompt("Đoán số trong khoảng từ 0 đến bao nhiêu?");
+            let randomNumber = Math.floor(Math.random() * (range + 1));
+
+            let guess;
+            let count = 0;
+
+            do {
+                guess = +prompt("Nhập con số bạn đoán:");
+                count++;
+
+                if (guess === randomNumber) {
+                    alert("Chúc mừng! Bạn đã đoán đúng.");
+                    break;
+                } else if (guess > randomNumber) {
+                    alert("Số bạn đoán lớn hơn kết quả.");
+                } else {
+                    alert("Số bạn đoán bé hơn kết quả.");
+                }
+
+                if (count === 3) {
+                    alert("Bạn đã hết lượt chơi! Số đúng là: " + randomNumber);
+                }
+            } while (count < 3);
+        }
+    </script>
+</body>
+
+</html>

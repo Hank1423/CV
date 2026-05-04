@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let money = 10000000;
+        let month = 12;
+        let rate = 0.01; 
+
+        for (let i = 1; i <= month; i++) {
+            money += money * rate;
+        }
+        console.log("Tổng tiền sau 12 tháng: " + money.toFixed(2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("Nhập số a: ");
+        let b = +prompt("Nhập số b: ");
+        let c = +prompt("Nhập số c: ");
+        if (a === 0) {
+        } else {
+            let delta = b * b - 4 * a * c;
+            if (delta < 0) console.log("Vô nghiệm");
+            else if (delta === 0) console.log("Nghiệm kép x = " + (-b / (2 * a)));
+            else {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                console.log(`2 nghiệm: x1 = ${x1}, x2 = ${x2}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
